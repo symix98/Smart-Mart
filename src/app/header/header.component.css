@@ -119,6 +119,15 @@ button{
   margin-top: 5px;
 }
 
+#btn{
+  background-color: #14734f;
+  border-radius: 0;
+  border: 1px solid red;
+  width: fit-content;
+  color: #fff;
+  align-self: center;
+}
+
 
 #foodTypes:hover #typeName{
   transform: scale(1.1);
@@ -129,7 +138,8 @@ button{
 }
 
 #sec2{
-  min-width: 100%;
+  width: 100%;
+  height: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
   display: flex;

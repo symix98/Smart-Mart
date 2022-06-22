@@ -46,15 +46,35 @@
     <section id="sec2">
         <div id="foodTypes"><i id="icon" style="color: #fff;" class="fa-solid fa-burger fa-4x"></i>
             <p id="typeName">Hot Foods</p>
+            <mat-select>
+                <mat-option *ngFor="let hotFood of hotFoods">
+                    {{hotFood}}
+                </mat-option>
+            </mat-select>
         </div>
         <div id="foodTypes"><i id="icon" style="color: #fff;" class="fa-solid fa-cookie-bite fa-4x"></i>
             <p id="typeName">Snack Food</p>
+            <mat-select>
+                <mat-option *ngFor="let food of hotFoods">
+                    {{food}}
+                </mat-option>
+            </mat-select>
         </div>
         <div id="foodTypes"><i id="icon" style="color: #fff;" class="fa-solid fa-mug-hot fa-4x"></i>
             <p id="typeName">Coffee</p>
+            <mat-select>
+                <mat-option *ngFor="let food of hotFoods">
+                    {{food}}
+                </mat-option>
+            </mat-select>
         </div>
         <div id="foodTypes"><i id="icon" style="color: #fff;" class="fa-solid fa-ice-cream fa-4x"></i>
             <p id="typeName">Ice Cream</p>
+            <mat-select>
+                <mat-option *ngFor="let food of hotFoods">
+                    {{food}}
+                </mat-option>
+            </mat-select>
         </div>
     </section>
 </body>
