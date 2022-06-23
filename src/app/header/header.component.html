@@ -40,41 +40,37 @@
                 exciting prize. Earn double entries when you buy the featured participating product of the week.</p>
             <button class="btn btn-success">Get The Deets</button>
         </div>
-        <div id="secondDiv"><img src="../../assets/redbull.jpg" alt="backkground-pic">
+        <div id="secondDiv"><img src="../../assets/rbull.PNG" alt="backkground-pic">
         </div>
     </section>
     <section id="sec2">
-        <div id="foodTypes"><i id="icon" style="color: #fff;" class="fa-solid fa-burger fa-4x"></i>
+        <div class="dropdown" id="foodTypes"><i class="dropbtn" id="icon" style="color: #fff;"
+                class="fa-solid fa-burger fa-4x"></i>
             <p id="typeName">Hot Foods</p>
-            <mat-select>
-                <mat-option *ngFor="let hotFood of hotFoods">
-                    {{hotFood}}
-                </mat-option>
-            </mat-select>
+            <div class="dropdown-content">
+                <a *ngFor="let hotFood of hotFoods" href="#">{{ hotFood }}</a>
+            </div>
         </div>
-        <div id="foodTypes"><i id="icon" style="color: #fff;" class="fa-solid fa-cookie-bite fa-4x"></i>
+        <div class="dropdown" id="foodTypes"><i class="dropbtn" id="icon" style="color: #fff;"
+                class="fa-solid fa-cookie-bite fa-4x"></i>
             <p id="typeName">Snack Food</p>
-            <mat-select>
-                <mat-option *ngFor="let food of hotFoods">
-                    {{food}}
-                </mat-option>
-            </mat-select>
+            <div class="dropdown-content">
+                <a *ngFor="let snack of snackFoods" href="#">{{ snack }}</a>
+            </div>
         </div>
-        <div id="foodTypes"><i id="icon" style="color: #fff;" class="fa-solid fa-mug-hot fa-4x"></i>
+        <div class="dropdown" id="foodTypes"><i class="dropbtn" id="icon" style="color: #fff;"
+                class="fa-solid fa-mug-hot fa-4x"></i>
             <p id="typeName">Coffee</p>
-            <mat-select>
-                <mat-option *ngFor="let food of hotFoods">
-                    {{food}}
-                </mat-option>
-            </mat-select>
+            <div class="dropdown-content">
+                <a *ngFor="let coffee of Coffee" href="#">{{ coffee }}</a>
+            </div>
         </div>
-        <div id="foodTypes"><i id="icon" style="color: #fff;" class="fa-solid fa-ice-cream fa-4x"></i>
+        <div class="dropdown" id="foodTypes"><i class="dropbtn" id="icon" style="color: #fff;"
+                class="fa-solid fa-ice-cream fa-4x"></i>
             <p id="typeName">Ice Cream</p>
-            <mat-select>
-                <mat-option *ngFor="let food of hotFoods">
-                    {{food}}
-                </mat-option>
-            </mat-select>
+            <div class="dropdown-content">
+                <a *ngFor="let icecream of iceCream" href="#">{{ icecream }}</a>
+            </div>
         </div>
     </section>
 </body>
