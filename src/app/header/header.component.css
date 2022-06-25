@@ -231,14 +231,14 @@ button{
     padding: .3% .5%;
 }
 #rightItem{
-  margin: 0
+  margin-left: 20%;
 }
 #svg{
   width: 1rem;
   height: 1rem;
 }
 #alogo{
-  max-width: 13%;
+  max-width: 10%;
 }
 #findStore{
   margin-left: .1%;
