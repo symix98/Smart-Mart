@@ -9,27 +9,28 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="#home"><img src="../../assets/logo.png" alt="logo" height="50" width="100"></a>
-            </li>
-            <li><a href="#home">FOOD</a></li>
-            <li><a href="#news">DRINKS</a></li>
-            <li><a href="#contact">Snacks</a></li>
-            <li style="float:right; margin-right: 15px;"><a href="#about"><i class="ri-user-line"></i></a></li>
-            <li style="float:right"><a id="findStore" href="#about">Find a Store</a></li>
-            <li style="float:right; margin-top: 8px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                    width="32" height="32">
-                    <path fill="none" d="M0 0h24v24H0z" />
-                    <path
-                        d="M12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0L12 23.728zm4.95-7.778a7 7 0 1 0-9.9 0L12 20.9l4.95-4.95zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
-                </svg></li>
-            <li><a href="#about">Order NOW<strong style="color: red;">!</strong></a></li>
-        </ul>
-    </nav>
+    <header>
+        <a href="#"><img id="logoImage" src="../../assets/logo.png" alt="logo" height="50" width="100"></a>
+        <nav class="navigation">
+            <a href="#home">FOOD</a>
+            <a href="#news">DRINKS</a>
+            <a href="#contact">Snacks</a>
+            <a href="#about">Order NOW<strong style="color: red;">!</strong></a>
+        </nav>
+        <a id="rightItem" href="logo"><svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32"
+                height="32">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                    d="M12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0L12 23.728zm4.95-7.778a7 7 0 1 0-9.9 0L12 20.9l4.95-4.95zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+            </svg>
+        </a>
+        <a id="findStore" href="#about">Find a Store</a>
+
+        <a id="user" href="#logo"><i class="ri-user-line"></i></a>
+    </header>
     <section id="sec1" style="display: flex; flex-direction: row;">
         <div id="firstDiv">
-            <img src="../../assets/brnfrz.png" alt="brain freeze" width="150" height="100">
+            <img id="brnfrz" src="../../assets/brnfrz.png" alt="brain freeze" width="150" height="100">
             <h1>Feel Hot. Stay Cool.</h1>
             <p id="text">Electrify your summer with exciting new prizes dropping every Friday, featuring
                 once-in-a-lifetime
@@ -44,32 +45,68 @@
         </div>
     </section>
     <section id="sec2">
-        <div class="dropdown" id="foodTypes"><i class="dropbtn" id="icon" style="color: #fff;"
+        <div (click)="viewSubCategories('hotfood')" id="foodTypes"><i id="icon" style="color: #fff;"
                 class="fa-solid fa-burger fa-4x"></i>
             <p id="typeName">Hot Foods</p>
-            <div class="dropdown-content">
-                <a *ngFor="let hotFood of hotFoods" href="#">{{ hotFood }}</a>
-            </div>
         </div>
-        <div class="dropdown" id="foodTypes"><i class="dropbtn" id="icon" style="color: #fff;"
+        <div (click)="viewSubCategories('snackfood')" id="foodTypes"><i id="icon" style="color: #fff;"
                 class="fa-solid fa-cookie-bite fa-4x"></i>
             <p id="typeName">Snack Food</p>
-            <div class="dropdown-content">
-                <a *ngFor="let snack of snackFoods" href="#">{{ snack }}</a>
-            </div>
         </div>
-        <div class="dropdown" id="foodTypes"><i class="dropbtn" id="icon" style="color: #fff;"
+        <div (click)="viewSubCategories('coffee')" id="foodTypes"><i id="icon" style="color: #fff;"
                 class="fa-solid fa-mug-hot fa-4x"></i>
             <p id="typeName">Coffee</p>
-            <div class="dropdown-content">
-                <a *ngFor="let coffee of Coffee" href="#">{{ coffee }}</a>
-            </div>
         </div>
-        <div class="dropdown" id="foodTypes"><i class="dropbtn" id="icon" style="color: #fff;"
+        <div (click)="viewSubCategories('icecream')" id="foodTypes"><i id="icon" style="color: #fff;"
                 class="fa-solid fa-ice-cream fa-4x"></i>
             <p id="typeName">Ice Cream</p>
-            <div class="dropdown-content">
-                <a *ngFor="let icecream of iceCream" href="#">{{ icecream }}</a>
+        </div>
+    </section>
+
+    <section *ngIf="isHotFood" id="sec3">
+        <div #hotfood id="cardContainer" *ngFor="let hotfood of hotFoods">
+            <div class="card">
+                <img src="{{ hotfood.url }}" alt="Avatar" width="100%" height="250">
+                <div class="container">
+                    <h4><b>{{ hotfood.title }}</b></h4>
+                    <p>{{ hotfood.description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section *ngIf="isSnackFood" id="sec3">
+        <div #hotfood id="cardContainer" *ngFor="let snackfood of snackFoods">
+            <div class="card">
+                <img src="{{ snackfood.url }}" alt="Avatar" width="100%" height="250">
+                <div class="container">
+                    <h4><b>{{ snackfood.title }}</b></h4>
+                    <p>{{ snackfood.description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section *ngIf="isCoffee" id="sec3">
+        <div #coffe id="cardContainer" *ngFor="let coffee of Coffee">
+            <div style="background-color: #f0cb99;" class="card">
+                <img src="{{ coffee.url }}" alt="Avatar" width="100%" height="250">
+                <div class="container">
+                    <h4><b>{{ coffee.title }}</b></h4>
+                    <p>{{ coffee.description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section *ngIf="isIceCream" id="sec3">
+        <div #hotfood id="cardContainer" *ngFor="let icecream of iceCreams">
+            <div class="card">
+                <img src="{{ icecream.url }}" alt="Avatar" width="100%" height="250">
+                <div class="container">
+                    <h4><b>{{ icecream.title }}</b></h4>
+                    <p>{{ icecream.description }}</p>
+                </div>
             </div>
         </div>
     </section>
