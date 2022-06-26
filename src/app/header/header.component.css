@@ -221,7 +221,11 @@ button{
   width: 3rem;
 }
 #rightItem{
-  margin-left: 20%;
+  margin-left: 5%;
+}
+#svg{
+  width: 1rem;
+  height: .5rem;
 }
   #sec1{
     display: block;
