@@ -66,7 +66,7 @@
     </section>
 
     <section *ngIf="isHotFood" id="sec3">
-        <div #hotfood id="cardContainer" *ngFor="let hotfood of hotFoods">
+        <div id="cardContainer" *ngFor="let hotfood of hotFoods">
             <div class="card">
                 <img src="{{ hotfood.url }}" alt="Avatar" width="100%" height="250">
                 <div class="container">
@@ -78,7 +78,7 @@
     </section>
 
     <section *ngIf="isSnackFood" id="sec3">
-        <div #hotfood id="cardContainer" *ngFor="let snackfood of snackFoods">
+        <div id="cardContainer" *ngFor="let snackfood of snackFoods">
             <div class="card">
                 <img src="{{ snackfood.url }}" alt="Avatar" width="100%" height="250">
                 <div class="container">
@@ -90,7 +90,7 @@
     </section>
 
     <section *ngIf="isCoffee" id="sec3">
-        <div #coffe id="cardContainer" *ngFor="let coffee of Coffee">
+        <div id="cardContainer" *ngFor="let coffee of Coffee">
             <div style="background-color: #f0cb99;" class="card">
                 <img src="{{ coffee.url }}" alt="Avatar" width="100%" height="250">
                 <div class="container">
@@ -102,7 +102,7 @@
     </section>
 
     <section *ngIf="isIceCream" id="sec3">
-        <div #hotfood id="cardContainer" *ngFor="let icecream of iceCreams">
+        <div id="cardContainer" *ngFor="let icecream of iceCreams">
             <div class="card">
                 <img src="{{ icecream.url }}" alt="Avatar" width="100%" height="250">
                 <div class="container">
