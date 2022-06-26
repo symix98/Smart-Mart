@@ -211,10 +211,6 @@ button{
 
 
 @media (max-width:360px){
-  *{
-    margin: 0;
-    padding: 0;
-  }
   body{
     font-size: 10px;
   }
@@ -235,17 +231,20 @@ button{
     padding: 0;
 }
 #rightItem{
-  /* margin-left: 20%; */
+  /* margin-left: 15%; */
 }
 #findStore{
-  margin-left: 10%;
+  /* margin-left: .1%; */
   text-decoration: none;
   color: black;
   font-weight: 700;
   font-size: .5rem;
 }
 #user{
-  margin: 50px;
+  margin-left: 5%;
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
 }
 #svg{
   width: 1rem;
