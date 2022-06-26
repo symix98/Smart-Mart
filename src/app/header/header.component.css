@@ -13,29 +13,22 @@
 /* Nav Bar Style Nav Bar Style Nav Bar Style Nav Bar Style Nav Bar Style Nav Bar Style */
 header {
     background-color: #fff;
-    width: 100vw;
+    width: 100%;
     position: fixed;
     z-index: 999;
-    display: flex;
-    justify-content:flex-start;
+    display: inline;
     align-items: center;
-    padding: 1% 2%;
+    padding: 1% .5%;
+}
+#logo{
+  height: 3rem;
+  width: 6rem;
 }
 #rightItem{
-  margin-left: 45%;
+  margin-left: 40%;
 }
 #findStore{
-  margin-left: .5%;
-  text-decoration: none;
-  color: black;
-  font-weight: 700;
-  font-size: 1rem;
-}
-#user{
-  margin-left: 3%;
-  text-decoration: none;
-  color: black;
-  font-weight: 700;
+  padding: 0;
 }
 .navigation a{
   color: black;
@@ -102,8 +95,10 @@ button{
   flex-direction: row;
 }
 #secondDiv > img{
-  width: 37.5rem;
-  height: 31.25rem;
+  /* width: 37.5rem;
+  height: 31.25rem; */
+  width: 50%;
+  height: 100%;
 }
 #sec3{
   width: 100%;
@@ -197,7 +192,7 @@ button{
 }
 
 #sec2{
-  width: 100vw;
+  width: 100%;
   height: 100%;
   margin-top: 0.313rem;
   display: flex;
@@ -212,17 +207,24 @@ button{
 
 @media (max-width:360px){
   body{
-    font-size: 10px;
+    font-size: 7px;
   }
-  h1{
-    font-size: 15px;
-  }
+  .navigation a{
+  color: black;
+  padding-left: 1rem;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: .5rem;
+}
+#logo{
+  height: 1.5rem;
+  width: 3rem;
+}
+#rightItem{
+  margin-left: 20%;
+}
   #sec1{
     display: block;
-  }
-  header{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    text-align: left;
   }
 }
