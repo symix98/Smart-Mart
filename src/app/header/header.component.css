@@ -206,6 +206,9 @@ button{
 
 
 @media (max-width:360px){
+  header {
+    padding: 1% .5%;
+}
   body{
     font-size: 7px;
   }
