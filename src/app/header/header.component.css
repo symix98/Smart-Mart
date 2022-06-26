@@ -261,6 +261,10 @@ h1{
   font-size: 2.125rem;
 }
 
+button{
+  margin-left: .8rem;
+}
+
 #text{
   width: 60ch;
   margin-left: 1.125rem;
