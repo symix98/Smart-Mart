@@ -231,13 +231,13 @@ button{
     padding: 0;
 }
 #rightItem{
-  margin-right: -5%;
+  margin-right: -2%;
 }
 #findStore{
-  margin-right: -2%;
+  margin-right: -5%;
   text-decoration: none;
   color: black;
-  font-weight: 700;
+  font-weight: 400;
   font-size: .5rem;
 }
 #user{
