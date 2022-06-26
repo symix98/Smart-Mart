@@ -121,7 +121,7 @@ button{
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  padding: 1.875rem;
+  padding: 1rem;
   margin: .938rem;
   height: 28.125rem;
   border: 0;
@@ -284,7 +284,7 @@ button{
 
 #sec3{
   width: 100%;
-  height: 100%;
+  height: fit-content;
   background-color: whitesmoke;
   display: flex;
   flex-direction: column;
