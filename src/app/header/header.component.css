@@ -231,7 +231,7 @@ button{
     padding: .3% .5%;
 }
 #rightItem{
-  margin-left: 20%;
+  margin-left: 35%;
 }
 #svg{
   width: 1rem;
@@ -254,8 +254,8 @@ button{
   color: black;
   padding-left: .3rem;
   text-decoration: none;
-  font-weight: 400;
-  font-size: .5rem;
+  font-weight: 500;
+  font-size: .7rem;
 }
 header > a > img{
   max-width: 50%;
