@@ -315,9 +315,6 @@ button{
 
 
 @media (max-width:600px){
-  .body{
-    width: 600px;;
-  }
     header {
     background-color: whitesmoke;
     padding: 1% 1.5%;
@@ -332,9 +329,10 @@ button{
 #logo{
   height: 1.5rem;
   width: 3rem;
+  margin-left: 10px;
 }
 #rightItem{
-  margin-left: 5%;
+  margin-left: 25%;
 }
 #svg{
   width: 1rem;
@@ -375,6 +373,7 @@ button{
 #text{
   width: 60ch;
   margin-left: 1.125rem;
+  font-size: 12px;
 }
 
   /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
@@ -404,13 +403,20 @@ button{
   transition: 0.3s;
   padding: .5rem;
   margin: .5rem;
-  height: 20rem;
+  height: 22rem;
   border: 0;
 }
 .container{
   margin-top: .938rem;
-  width: fit-content;
+  width: 100%;
   height: fit-content;
+  text-align: center;
+}
+h4{
+  font-size: 25px;
+}
+.container > p{
+  font-size: 20px;
 }
 
 /* Categories Responsive Categories Responsive Categories Responsive Categories Responsive */
