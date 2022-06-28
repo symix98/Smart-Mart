@@ -247,7 +247,6 @@ button{
 
   body{
     font-size: 7px;
-    width: 100vw;
   }
 
   #sec1{
@@ -275,7 +274,7 @@ button{
 }
 
 #text{
-  width: 60ch;
+  width: 100vw;
   margin-left: 1.125rem;
   font-size: 12px;
 }
