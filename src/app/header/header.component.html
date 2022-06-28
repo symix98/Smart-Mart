@@ -11,7 +11,7 @@
 <body>
     <header>
 
-        <nav class="navigation">
+        <nav class="navigation" id="myTopNav">
             <a style="margin-left: -25px;" href="#"><img id="logo" src="../../assets/logo.png" alt="logo"></a>
             <a href="#home">FOOD</a>
             <a href="#news">DRINKS</a>
@@ -27,6 +27,9 @@
             <a id="findStore" href="#about">Find a Store</a>
 
             <a id="user" href="#logo"><i class="ri-user-line"></i></a>
+            <a href="javascript:void(0);" class="icon" (click)="collapseNavBar()">
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
 
     </header>

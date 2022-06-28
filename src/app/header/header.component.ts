@@ -203,5 +203,14 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  collapseNavBar() {
+  var x = document.getElementById("myTopNav") as HTMLElement;
+  if (x.className === "navigation") {
+    x.className += " responsive";
+  } else {
+    x.className = "navigation";
+  }
+}
+
 
 }
