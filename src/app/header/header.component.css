@@ -231,7 +231,7 @@ button{
     right: 0;
     top: 0;
   }
-  .navigation.responsive a {
+  .navigation.responsive a:not(:first-child) {
     float: none;
     display: block;
     text-align: left;
