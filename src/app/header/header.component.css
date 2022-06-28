@@ -232,13 +232,19 @@ button{
   /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
   /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
 
+  header {
+    background-color: whitesmoke;
+    width: 100%;
+    position: fixed;
+    padding: 1% .5%;
+}
+
   #rightItem{
   margin-left: 0;
 }
 
   body{
     font-size: 7px;
-    width: 100%;
   }
 
   #sec1{
