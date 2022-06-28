@@ -234,9 +234,13 @@ button{
   /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
   /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
 
+  html{
+    width: fit-content;
+    height: fit-content;
+  }
   header {
     background-color: whitesmoke;
-    width: 100vw;
+    width: 100%;
     position: fixed;
     padding: 1% .5%;
 }
@@ -274,7 +278,7 @@ button{
 }
 
 #text{
-  width: 100vw;
+  width: 60ch;
   margin-left: 1.125rem;
   font-size: 12px;
 }
