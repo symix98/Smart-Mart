@@ -234,14 +234,10 @@ button{
   /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
   /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
 
-  html{
-    width: fit-content;
-    height: fit-content;
-  }
   header {
     background-color: whitesmoke;
-    width: 100%;
-    position: fixed;
+    width: 100vw;
+    position: relative;
     padding: 1% .5%;
 }
 
