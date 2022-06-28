@@ -274,6 +274,7 @@ button{
 }
 
 #text{
+  width: fit-content;
   margin-left: 1.125rem;
   font-size: 12px;
 }
