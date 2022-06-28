@@ -236,7 +236,7 @@ button{
 
   header {
     background-color: whitesmoke;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     padding: 1% .5%;
 }
@@ -274,7 +274,7 @@ button{
 }
 
 #text{
-  width: 60ch;
+  width: 50ch;
   margin-left: 1.125rem;
   font-size: 12px;
 }
