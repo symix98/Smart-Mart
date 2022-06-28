@@ -237,7 +237,7 @@ button{
   header {
     background-color: whitesmoke;
     width: 100vw;
-    position: relative;
+    position: fixed;
     padding: 1% .5%;
 }
 
@@ -247,6 +247,7 @@ button{
 
   body{
     font-size: 7px;
+    width: 100vw;
   }
 
   #sec1{
