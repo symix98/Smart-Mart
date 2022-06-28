@@ -449,4 +449,34 @@ h4{
 body{
     font-size: 7px;
   }
+  #sec3{
+  width: 100%;
+  height: fit-content;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+#cardContainer{
+  width: 100%;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: .5rem;
+  margin: .5rem;
+  height: 22rem;
+  border: 0;
+}
+.container{
+  margin-top: .938rem;
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+}
+h4{
+  font-size: 25px;
+}
+.container > p{
+  font-size: 20px;
+}
 }
