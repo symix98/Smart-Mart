@@ -215,9 +215,9 @@ button{
 @media screen and (max-width: 600px) {
   .navigation a:not(:first-child) {display: none;}
   .navigation a.icon {
+    float: right;
     display: block;
-    width: 32px;
-    height: 32px;
+    font-size: 32px;
   }
   .navigation.responsive {position: relative;}
   .navigation.responsive .icon {
