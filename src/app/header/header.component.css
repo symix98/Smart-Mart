@@ -340,7 +340,7 @@ h4{
   }
   header {
     background-color: whitesmoke;
-    padding: 1% 1.5%;
+    /* padding: 1% 1.5%; */
 }
   .navigation a{
   color: black;
