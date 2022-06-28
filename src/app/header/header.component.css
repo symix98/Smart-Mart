@@ -338,13 +338,80 @@ h4{
     display: block;
     text-align: left;
   }
-  #rightItem{
+  header {
+    background-color: whitesmoke;
+    padding: 1% 1.5%;
+}
+  .navigation a{
+  color: black;
+  padding-left: 1rem;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: .5rem;
+}
+#logo{
+  height: 1.5rem;
+  width: 3rem;
+  margin-left: 10px;
+}
+#rightItem{
   margin-left: 0;
 }
-body{
+#svg{
+  width: 1rem;
+  height: .5rem;
+}
+  #sec1{
+    display: block;
+  }
+
+  /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
+  /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
+  /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
+  /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
+
+  body{
     font-size: 7px;
   }
-  #sec3{
+  #brnfrz{
+    width: 100px;
+    height: 50px;
+  }
+
+  #firstDiv > img{
+  margin-top: 3.5rem;
+  margin-left: .8rem;
+}
+
+h1{
+  margin-left: .7rem;
+  margin-top: .6rem;
+  font-size: 2.125rem;
+}
+
+button{
+  margin-left: .8rem;
+}
+
+#text{
+  width: 60ch;
+  margin-left: 1.125rem;
+  font-size: 12px;
+}
+
+  /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
+  /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
+  /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
+  /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
+
+
+
+/* Categories Responsive Categories Responsive Categories Responsive Categories Responsive */
+/* Categories Responsive Categories Responsive Categories Responsive Categories Responsive */
+/* Categories Responsive Categories Responsive Categories Responsive Categories Responsive */
+/* Categories Responsive Categories Responsive Categories Responsive Categories Responsive */
+
+#sec3{
   width: 100%;
   height: fit-content;
   background-color: whitesmoke;
@@ -374,4 +441,9 @@ h4{
 .container > p{
   font-size: 20px;
 }
+
+/* Categories Responsive Categories Responsive Categories Responsive Categories Responsive */
+/* Categories Responsive Categories Responsive Categories Responsive Categories Responsive */
+/* Categories Responsive Categories Responsive Categories Responsive Categories Responsive */
+/* Categories Responsive Categories Responsive Categories Responsive Categories Responsive */
 }
