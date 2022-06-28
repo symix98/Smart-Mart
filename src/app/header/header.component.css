@@ -37,6 +37,9 @@ header {
   font-weight: 700;
   font-size: 1rem;
 }
+.navigation .icon {
+  display: none;
+}
 
 /* Nav Bar Style Nav Bar Style Nav Bar Style Nav Bar Style Nav Bar Style Nav Bar Style */
 /* Nav Bar Style Nav Bar Style Nav Bar Style Nav Bar Style Nav Bar Style Nav Bar Style */
@@ -226,7 +229,6 @@ button{
     display: block;
     text-align: left;
   }
-
   /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
   /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
   /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
