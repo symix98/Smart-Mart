@@ -219,6 +219,12 @@ button{
     display: block;
     font-size: 32px;
   }
+  #svg{
+    display: none;
+  }
+  #findStore{
+  padding-left: 2rem;
+}
   .navigation.responsive {position: relative;}
   .navigation.responsive .icon {
     position: absolute;
@@ -229,6 +235,7 @@ button{
     float: none;
     display: block;
     text-align: left;
+    margin-top: 1rem;
   }
   /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
   /* Responsive Body Responsive Body Responsive Body Responsive Body Responsive Body */
