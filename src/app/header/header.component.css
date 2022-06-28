@@ -225,9 +225,15 @@ button{
   #findStore{
   padding-left: 2rem;
 }
+#sec1{
+  padding-top: 30px;
+}
+#firstDiv{
+  margin-bottom: 15px;
+}
   .navigation.responsive {position: relative;}
   .navigation.responsive .icon {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
   }
