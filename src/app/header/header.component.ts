@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsservicesService } from '../services/productsservices.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -48,44 +49,6 @@ export class HeaderComponent implements OnInit {
     "title": "Escalope",
     "description": "Escalope Chicken Sandwich",
     "url": "https://trustedveal.com/wp-content/uploads/2019/07/cov-recipes-cutlet-sandwich.jpg",
-  },
-  ];
-  snackFoods: Array<any> = [
-    {
-    "id": 1,
-    "title": "Snickers",
-    "description": "Chocolate bar 50G",
-    "url": "https://d145dj1pf6foch.cloudfront.net/catalog/product/cache/2375564f3f871780f5ea892336b7888c/1/0/105014-v001-1_3.jpg",
-  },
-  {
-    "id": 2,
-    "title": "Dolsi Chips",
-    "description": "Dolsi Chips Peanut Gold 40G",
-    "url": "https://cdnprod.mafretailproxy.com/sys-master-root/h93/hee/9054547705886/215685_main.jpg_480Wx480H",
-  },
-  {
-    "id": 3,
-    "title": "Red Bull",
-    "description": "Red Bull Energy 250ML",
-    "url": "https://images.chickadvisor.com/item/35219/375/i/red-bull-energy-drink.jpg",
-  },
-  {
-    "id": 4,
-    "title": "Gandour Cookies",
-    "description": "Gandour Cookies Chocolate 156G",
-    "url": "https://cdnprod.mafretailproxy.com/sys-master-root/hcd/h31/17365794750494/327691_main.jpg_480Wx480H",
-  },
-  {
-    "id": 5,
-    "title": "Mixed Nuts",
-    "description": "Castania Mixed Nuts 100G",
-    "url": "https://cdnprod.mafretailproxy.com/sys-master-root/hf0/ha1/13724171927582/812706_main.jpg_1700Wx1700H",
-  },
-  {
-    "id": 6,
-    "title": "Pepsi",
-    "description": "Pepsi Can 330ML",
-    "url": "https://cdnprod.mafretailproxy.com/sys-master-root/h52/hce/27150215217182/13191_main.jpg_480Wx480H",
   },
   ];
   Coffee: Array<any> = [
@@ -164,10 +127,16 @@ export class HeaderComponent implements OnInit {
     "url": "https://www.daysoftheyear.com/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=contain%2Cgravity=auto%2Cheight=675%2Cmetadata=none%2Conerror=redirect%2Cq=85%2Cwidth=1200/wp-content/uploads/banana-split-day.jpg",
   },
   ];
-  constructor() {
+  
+  snackFoods: any;
+  constructor(private productsService: ProductsservicesService) {
   }
 
   ngOnInit(): void {
+    this.productsService.getAllProducts().subscribe((res)=>{
+      console.log(res);
+      this.snackFoods = res;
+    });
   }
 
   viewSubCategories(type: string){

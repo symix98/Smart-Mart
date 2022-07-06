@@ -81,12 +81,13 @@
     </section>
 
     <section *ngIf="isSnackFood" id="sec3">
-        <div id="cardContainer" *ngFor="let snackfood of snackFoods">
+        <div id="cardContainer" *ngFor="let snackfood of snackFoods.data">
             <div class="card">
-                <img src="{{ snackfood.url }}" alt="Avatar" width="100%" height="250">
+                <img src="{{ snackfood.imageurl }}" alt="Avatar" width="100%" height="250">
                 <div class="container">
-                    <h4><b>{{ snackfood.title }}</b></h4>
+                    <h4><b>{{ snackfood.name }}</b></h4>
                     <p>{{ snackfood.description }}</p>
+                    <p>{{ snackfood.price }}</p>
                 </div>
             </div>
         </div>

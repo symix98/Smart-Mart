@@ -25,7 +25,7 @@ header {
   width: 6rem;
 }
 #rightItem{
-  margin-left: 40%;
+  margin-left: 55%;
 }
 #findStore{
   padding: 0;
@@ -212,7 +212,7 @@ button{
 /* Menu Style Menu Style Menu Style Menu Style Menu Style Menu Style Menu Style Menu Style  */
 
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .navigation a:not(:first-child) {display: none;}
   .navigation a.icon {
     float: right;
