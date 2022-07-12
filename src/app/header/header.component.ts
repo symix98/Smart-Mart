@@ -133,7 +133,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.productsService.getAllProducts().subscribe((res)=>{
+    this.productsService.getProductById(1).subscribe((res)=>{
       console.log(res);
       this.snackFoods = res;
     });

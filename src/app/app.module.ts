@@ -7,14 +7,16 @@ import { HeaderModule } from './header/header.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginModule } from './login/login.module';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
+    LoginModule,
     NgbModule,
     BrowserAnimationsModule,
     HttpClientModule

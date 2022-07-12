@@ -105,5 +105,7 @@
       }
     }
   },
-  "defaultProject": "smart-mart"
+  "cli": {
+    "analytics": false
+  }
 }

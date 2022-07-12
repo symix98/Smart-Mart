@@ -1,22 +1,24 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+
 @Injectable({
   providedIn: 'root'
 })
-export class ProductsservicesService {
+export class UserService {
 
   constructor(private _httpclient: HttpClient) { }
 
+
   //connect frontend to backend
-  apiUrl = 'http://localhost:3000/api/products/product';
+  apiUrl = 'http://localhost:3000/api/users/user';
 
 
   // get all products
 
-  getAllProducts(){
+  getAllUsers(){
     return this._httpclient.get(`${this.apiUrl}`);
   }
-  getProductById(id: any){
+  getSingleUserById(id: any){
     return this._httpclient.get(`${this.apiUrl}/`+ id);
   }
 }
