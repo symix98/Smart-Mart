@@ -11,7 +11,7 @@ export class UserService {
 
   //connect frontend to backend
   apiUrl = 'http://localhost:3000/api/users/user';
-
+  registerUserApiUrl = 'http://localhost:3000/api/users/user/register';
 
   // get all products
 
@@ -20,5 +20,8 @@ export class UserService {
   }
   getSingleUserById(id: any){
     return this._httpclient.get(`${this.apiUrl}/`+ id);
+  }
+  registerNewUser(data: any){
+    return this._httpclient.post(`${this.registerUserApiUrl}`,data);
   }
 }
