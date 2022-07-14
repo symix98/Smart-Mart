@@ -1,0 +1,12 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    padding: 2rem;
+}
+.form-control, .btn{
+    width: 50vw;
+}
+.card{
+    width: 50vw;
+}

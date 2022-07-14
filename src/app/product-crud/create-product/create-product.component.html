@@ -1,0 +1,31 @@
+<div class="main">
+    <form [formGroup]="ProductForm" (ngSubmit)="submitProduct()">
+        <div class="container">
+            <div class="form_group">
+                <label>Description:</label>
+                <input type="text" class="form-control" #desc formControlName="description" />
+            </div>
+            <div class="form_group">
+                <label>Price:</label>
+                <input type="text" class="form-control" #prc formControlName="price" />
+            </div>
+            <div class="form_group">
+                <label>Image URL:</label>
+                <input type="text" class="form-control" #img formControlName="imageurl" />
+            </div>
+            <div class="form_group">
+                <label>Show/Hide:</label>
+                <input type="password" class="form-control" #showhide formControlName="ShowHide" />
+            </div>
+            <button type="submit" class="btn btn-success">Insert</button>
+        </div>
+    </form>
+    <div class="card">
+        <img [src]="img.value" />
+        <div class="card-body">
+            <h5 class="card-title">{{ desc.value }}</h5>
+            <p class="card-text">{{ prc.value }}</p>
+            <p class="card-text">{{ showhide.value }}</p>
+        </div>
+    </div>
+</div>

@@ -8,6 +8,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './login/login.module';
+import { FormsModule } from '@angular/forms';
+import { ProductCrudModule } from './product-crud/product-crud.module';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +22,11 @@ import { LoginModule } from './login/login.module';
     LoginModule,
     NgbModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ProductCrudModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
