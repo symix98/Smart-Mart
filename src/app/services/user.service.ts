@@ -12,6 +12,7 @@ export class UserService {
   //connect frontend to backend
   apiUrl = 'http://localhost:3000/api/users/user';
   UserLoginApiUrl = 'http://localhost:3000/api/users/user/login';
+  editUserApiUrl = 'http://localhost:3000/api/users/user/edit';
 
   // get all products
 
@@ -23,5 +24,8 @@ export class UserService {
   }
   login(data: any){
     return this._httpclient.post(`${this.UserLoginApiUrl}`,data);
+  }
+  editUser(data: any){
+    return this._httpclient.put(`${this.editUserApiUrl}`,data);
   }
 }

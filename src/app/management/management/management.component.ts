@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
 import { ProductsservicesService } from 'src/app/services/productsservices.service';
 import { UserService } from 'src/app/services/user.service';
+import { EditUserComponent } from '../edit-user/edit-user.component';
 
 @Component({
   selector: 'app-management',
@@ -11,7 +13,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class ManagementComponent implements OnInit {
 
-  constructor(private productService: ProductsservicesService,private toastr: ToastrService, private userService: UserService) { }
+  constructor(private productService: ProductsservicesService,private toastr: ToastrService, private userService: UserService, private modalService: NgbModal,) { }
 
   price: any;
   description: any;
@@ -36,7 +38,15 @@ export class ManagementComponent implements OnInit {
   }
 
 
-    submitProduct(){
+  editUser(username: any){
+    const modalRef = this.modalService.open(
+      EditUserComponent,
+      { centered: true }
+    );
+    modalRef.componentInstance.username = username;
+  }
+
+  submitProduct(){
     if(this.ProductForm.invalid){
       return;
     }

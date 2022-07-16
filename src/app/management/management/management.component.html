@@ -1,4 +1,4 @@
-<ng-template [ngIf]="level === 'data'" [ngIfElse]="usermanagement">
+<ng-template [ngIf]="level === 'data'">
     <div class="main">
         <form [formGroup]="ProductForm" (ngSubmit)="submitProduct()">
             <h2>Data Entry</h2>
@@ -35,8 +35,55 @@
 
 
 
-<ng-template #usermanagement>
+<ng-template [ngIf]="level === 'sales'">
     <div class="list-group" *ngFor="let user of allUsers">
-        <button type="button" class="list-group-item list-group-item-action">{{ user.username }}</button>
+        <button type="button" (click)="editUser(user.username)" class="list-group-item list-group-item-action">{{
+            user.username
+            }}</button>
+    </div>
+</ng-template>
+
+
+
+<ng-template [ngIf]="level === 'admin'">
+    <div class="main">
+        <form [formGroup]="ProductForm" (ngSubmit)="submitProduct()">
+            <h2>Data Entry</h2>
+            <div class="container">
+                <div class="form_group">
+                    <label>Description:</label>
+                    <input type="text" class="form-control" #desc formControlName="description" />
+                </div>
+                <div class="form_group">
+                    <label>Price:</label>
+                    <input type="text" class="form-control" #prc formControlName="price" />
+                </div>
+                <div class="form_group">
+                    <label>Image URL:</label>
+                    <input type="text" class="form-control" #img formControlName="imageurl" />
+                </div>
+                <div class="form_group">
+                    <label>Show/Hide:</label>
+                    <input type="password" class="form-control" #showhide formControlName="ShowHide" />
+                </div>
+                <button type="submit" class="btn btn-success">Insert</button>
+            </div>
+        </form>
+        <div class="card">
+            <img [src]="img.value" />
+            <div class="card-body">
+                <h5 class="card-title">{{ desc.value }}</h5>
+                <p class="card-text">{{ prc.value }}</p>
+                <p class="card-text">{{ showhide.value }}</p>
+            </div>
+        </div>
+    </div>
+
+
+    <h2>Users List</h2>
+    <div class="list-group" *ngFor="let user of allUsers">
+        <button type="button" (click)="editUser(user.username)" class="list-group-item list-group-item-action">{{
+            user.username
+            }}</button>
     </div>
 </ng-template>
