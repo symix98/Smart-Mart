@@ -1,10 +1,6 @@
-<h2>Modal Signup Form</h2>
-
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
 <div id="id01" class="modal">
 
-    <form class="modal-content animate" [formGroup]="LoginForm" (ngSubmit)="submitUser()">
+    <form class="modal-content animate" [formGroup]="LoginForm" (ngSubmit)="submitUserLogin()">
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close"
                 title="Close Modal">&times;</span>
@@ -13,19 +9,13 @@
         </div>
 
         <div class="container">
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" required formControlName="email">
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" required formControlName="username">
 
             <label for="password"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" required formControlName="password">
 
-            <label for="role"><b>Role</b></label>
-            <input type="text" placeholder="Enter Role" required formControlName="role">
-
-            <button type="submit">Sign Up</button>
-            <!-- <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label> -->
+            <button type="submit">Login</button>
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
