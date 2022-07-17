@@ -4,6 +4,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
 import { ProductsservicesService } from 'src/app/services/productsservices.service';
 import { UserService } from 'src/app/services/user.service';
+import { CreateUserComponent } from '../create-user/create-user.component';
 import { EditUserComponent } from '../edit-user/edit-user.component';
 
 @Component({
@@ -18,10 +19,11 @@ export class ManagementComponent implements OnInit {
   price: any;
   description: any;
   imageurl: any;
-  ShowHide: any;
+  // ShowHide: any;
   ProductForm!: FormGroup;
   level: any;
   allUsers: any = [];
+  showHideValue: any;
   ngOnInit(): void {
     this.level = localStorage.getItem('level');
     this.userService.getAllUsers().subscribe((res)=>{
@@ -44,6 +46,13 @@ export class ManagementComponent implements OnInit {
       { centered: true }
     );
     modalRef.componentInstance.username = username;
+  }
+
+  createNewUser(){
+    const modalRef = this.modalService.open(
+      CreateUserComponent,
+      { centered: true }
+    );
   }
 
   submitProduct(){

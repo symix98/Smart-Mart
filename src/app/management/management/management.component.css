@@ -1,12 +1,23 @@
 .main{
     display: flex;
     flex-direction: row;
-    width: 100vw;
     padding: 2rem;
 }
-.form-control, .btn{
-    width: 50vw;
+.container{
+    width: 70vw;
 }
 .card{
+    width: 30vw;
+    height: 300px;
+}
+#users{
+    padding: 2rem;
     width: 50vw;
+}
+#image{
+    height: 100%;
+    width: auto;
+}
+.form_group{
+    margin-bottom: 1rem;
 }

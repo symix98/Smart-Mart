@@ -1,7 +1,8 @@
+<!-- This template will be displayed if user has data entry role. -->
 <ng-template [ngIf]="level === 'data'">
     <div class="main">
         <form [formGroup]="ProductForm" (ngSubmit)="submitProduct()">
-            <h2>Data Entry</h2>
+            <h2>Product Management</h2>
             <div class="container">
                 <div class="form_group">
                     <label>Description:</label>
@@ -16,8 +17,11 @@
                     <input type="text" class="form-control" #img formControlName="imageurl" />
                 </div>
                 <div class="form_group">
-                    <label>Show/Hide:</label>
-                    <input type="password" class="form-control" #showhide formControlName="ShowHide" />
+                    <label for="showhide">Show/Hide:</label>
+                    <select formControlName="ShowHide" style="margin-left: .3rem;">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-success">Insert</button>
             </div>
@@ -25,30 +29,24 @@
         <div class="card">
             <img [src]="img.value" />
             <div class="card-body">
-                <h5 class="card-title">{{ desc.value }}</h5>
-                <p class="card-text">{{ prc.value }}</p>
-                <p class="card-text">{{ showhide.value }}</p>
+                <h5 class="card-title"><strong>Description:</strong> {{ desc.value }}</h5>
+                <p class="card-text"><strong>Price:</strong> {{ prc.value }}</p>
+                <p class="card-text"><strong>Show/Hide:</strong> {{ showHideValue }}</p>
             </div>
         </div>
     </div>
 </ng-template>
+<!-- This template will be displayed if user has data entry role. -->
 
 
 
-<ng-template [ngIf]="level === 'sales'">
-    <div class="list-group" *ngFor="let user of allUsers">
-        <button type="button" (click)="editUser(user.username)" class="list-group-item list-group-item-action">{{
-            user.username
-            }}</button>
-    </div>
-</ng-template>
 
 
-
+<!-- This template will be displayed if user has admin role. -->
 <ng-template [ngIf]="level === 'admin'">
     <div class="main">
         <form [formGroup]="ProductForm" (ngSubmit)="submitProduct()">
-            <h2>Data Entry</h2>
+            <h2>Product Management</h2>
             <div class="container">
                 <div class="form_group">
                     <label>Description:</label>
@@ -63,8 +61,11 @@
                     <input type="text" class="form-control" #img formControlName="imageurl" />
                 </div>
                 <div class="form_group">
-                    <label>Show/Hide:</label>
-                    <input type="password" class="form-control" #showhide formControlName="ShowHide" />
+                    <label for="showhide">Show/Hide:</label>
+                    <select formControlName="ShowHide" style="margin-left: .3rem;">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-success">Insert</button>
             </div>
@@ -72,18 +73,36 @@
         <div class="card">
             <img [src]="img.value" />
             <div class="card-body">
-                <h5 class="card-title">{{ desc.value }}</h5>
-                <p class="card-text">{{ prc.value }}</p>
-                <p class="card-text">{{ showhide.value }}</p>
+                <h5 class="card-title"><strong>Description:</strong> {{ desc.value }}</h5>
+                <p class="card-text"><strong>Price:</strong> {{ prc.value }}</p>
+                <p class="card-text"><strong>Show/Hide:</strong> {{ showHideValue }}</p>
             </div>
         </div>
     </div>
-
-
-    <h2>Users List</h2>
-    <div class="list-group" *ngFor="let user of allUsers">
-        <button type="button" (click)="editUser(user.username)" class="list-group-item list-group-item-action">{{
-            user.username
-            }}</button>
+    <div id="users">
+        <h2>Users Management</h2>
+        <div class="list-group" *ngFor="let user of allUsers">
+            <button type="button" (click)="editUser(user.username)" class="list-group-item list-group-item-action">{{
+                user.username }}</button>
+        </div>
+        <button class="btn btn-success" (click)="createNewUser()">Create User</button>
     </div>
 </ng-template>
+<!-- This template will be displayed if user has admin role. -->
+
+
+
+
+
+<!-- This template will be displayed if user has sales role. -->
+<ng-template [ngIf]="level === 'sales'">
+    <div id="users">
+        <h2>Users Management</h2>
+        <div class="list-group" *ngFor="let user of allUsers">
+            <button type="button" (click)="editUser(user.username)" class="list-group-item list-group-item-action">{{
+                user.username
+                }}</button>
+        </div>
+    </div>
+</ng-template>
+<!-- This template will be displayed if user has sales role. -->

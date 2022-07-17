@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   LoginForm!: FormGroup;
 
   ngOnInit(): void {
+    localStorage.clear();
      this.LoginForm = new FormGroup({
             username: new FormControl('',Validators.required),
             password: new FormControl('',Validators.required),
@@ -35,7 +36,7 @@ export class LoginComponent implements OnInit {
       this.toastr.success("User Logged In Successfully!");
       this.loginCred = res;
       localStorage.setItem('level',this.loginCred.data);
-      this.router.navigate(['/management']);
+      this.router.navigate(['/roguemin']);
     },error: (e) => {
           console.log(e);
           this.toastr.warning("Wrong Credentials, Please try Again :(");

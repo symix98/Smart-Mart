@@ -13,7 +13,7 @@ import { ManagementComponent } from './management/management/management.componen
 const routes: Routes = [
    { path: '', component: LoginComponent },
    { path: 'home', component: HeaderComponent },
-   { path: 'management', component: ManagementComponent },
+   { path: 'roguemin', component: ManagementComponent },
   //  { 
   //   path: 'admin', 
   //   component: AdminComponent, 

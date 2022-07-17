@@ -10,7 +10,7 @@ export class ProductsservicesService {
   //connect frontend to backend
   apiUrl = 'http://localhost:3000/api/products/product';
   createProductApiUrl = 'http://localhost:3000/api/products/product/create';
-
+  updateProductApiUrl = 'http://localhost:3000/api/products/product/update';
 
   // get all products
 
@@ -22,5 +22,8 @@ export class ProductsservicesService {
   }
   createNewProduct(data: any){
     return this._httpclient.post(`${this.createProductApiUrl}`,data);
+  }
+  updateProductById(productUpdate: any,id: any){
+    return this._httpclient.put(`${this.updateProductApiUrl}/`+ id,productUpdate);
   }
 }
