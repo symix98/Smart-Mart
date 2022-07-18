@@ -12,7 +12,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
   declarations: [
     ManagementComponent,
     EditUserComponent,
-    CreateUserComponent
+    CreateUserComponent,
   ],
   imports: [
     CommonModule,
