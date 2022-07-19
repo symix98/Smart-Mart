@@ -129,7 +129,6 @@ showCreateProductDiv(){
     this.productsService.searchProduct(search).subscribe({next:(res)=>{
       if(res){
         this.result = res;
-        console.log(res);
         this.allProducts = this.result.data;
       }
       else{
