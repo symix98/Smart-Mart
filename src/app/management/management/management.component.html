@@ -3,18 +3,22 @@
     <div class="main">
         <form [formGroup]="ProductForm" (ngSubmit)="submitProductForm()">
             <h2>Product Management</h2>
-            <div class="container">
+            <button class="btn btn-success" (click)="showCreateProductDiv()" style="margin-right: .5rem;">Create
+                Product</button>
+            <button class="btn btn-warning" (click)="showAllProductsDiv()" style="margin-right: .5rem;">Show All
+                Products</button>
+            <div *ngIf="showCreateProduct" class="container">
                 <div class="form_group">
                     <label>Description:</label>
-                    <input type="text" class="form-control" #desc formControlName="description" />
+                    <input type="text" class="form-control" formControlName="description" />
                 </div>
                 <div class="form_group">
                     <label>Price:</label>
-                    <input type="text" class="form-control" #prc formControlName="price" />
+                    <input type="text" class="form-control" formControlName="price" />
                 </div>
                 <div class="form_group">
                     <label>Image URL:</label>
-                    <input type="text" class="form-control" #img formControlName="imageurl" />
+                    <input type="text" class="form-control" formControlName="imageurl" />
                 </div>
                 <div class="form_group">
                     <label for="showhide">Show/Hide:</label>
@@ -23,17 +27,21 @@
                         <option value="no">No</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-success">Insert</button>
+                <button type="submit" class="btn btn-success">Create</button>
+            </div>
+            <div class="list-group" id="sec3">
+                <div id="cardContainer" *ngFor="let product of allProducts">
+                    <div class="card" *ngIf="showAllProducts">
+                        <img src="{{ product.imageurl }}" alt="Avatar" width="100%" height="250">
+                        <div class="container">
+                            <h4><b>{{ product.pdesc }}</b></h4>
+                            <p>{{ product.pprice }}</p>
+                            <button class="btn btn-warning" (click)="editProduct(product.pid)">Edit Product</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </form>
-        <div class="card">
-            <img [src]="img.value" />
-            <div class="card-body">
-                <h5 class="card-title"><strong>Description:</strong> {{ desc.value }}</h5>
-                <p class="card-text"><strong>Price:</strong> {{ prc.value }}</p>
-                <p class="card-text"><strong>Show/Hide:</strong> {{ showHideValue }}</p>
-            </div>
-        </div>
     </div>
 </ng-template>
 <!-- This template will be displayed if user has data entry role. -->
@@ -103,9 +111,10 @@
                         <option value="no">No</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-success">Insert</button>
+                <button type="submit" class="btn btn-success">Create</button>
             </div>
-            <div class="list-group">
+            <input class="searchBox" placeholder="Search Product" type="text" (keyup)="searchProduct($event)" />
+            <div class="list-group" id="sec3">
                 <div id="cardContainer" *ngFor="let product of allProducts">
                     <div class="card" *ngIf="showAllProducts">
                         <img src="{{ product.imageurl }}" alt="Avatar" width="100%" height="250">

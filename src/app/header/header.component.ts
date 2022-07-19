@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ProductsservicesService } from '../services/productsservices.service';
-import { EditProductComponent } from './edit-product/edit-product.component';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -182,15 +181,5 @@ export class HeaderComponent implements OnInit {
     x.className = "navigation";
   }
 }
-
-editProduct(productID: any){
-  console.log(productID)
-  const modalRef = this.modalService.open(
-      EditProductComponent,
-      { centered: true }
-    );
-    modalRef.componentInstance.productID = productID;
-}
-
 
 }

@@ -6,11 +6,9 @@ import { HeaderComponent } from './header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
-import { EditProductComponent } from './edit-product/edit-product.component';
 @NgModule({
   declarations: [
     HeaderComponent,
-    EditProductComponent
   ],
   imports: [
     CommonModule,

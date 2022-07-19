@@ -5,6 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 import { ProductsservicesService } from 'src/app/services/productsservices.service';
 import { UserService } from 'src/app/services/user.service';
 import { CreateUserComponent } from '../create-user/create-user.component';
+import { EditProductComponent } from '../edit-product/edit-product.component';
 import { EditUserComponent } from '../edit-user/edit-user.component';
 
 @Component({
@@ -24,11 +25,14 @@ export class ManagementComponent implements OnInit {
   level: any;
   allUsers: any = [];
   allProducts: any = [];
+  result: any = [];
+  allProductsNoChange: any = [];
   showHideValue: any;
   showAllUsers: boolean = false;
   showCreateUserForm: boolean = false;
   showCreateProduct: boolean = false;
   showAllProducts: boolean = false;
+  productSearch!: string;
   ngOnInit(): void {
     this.level = localStorage.getItem('level');
     this.userService.getAllUsers().subscribe((res)=>{
@@ -50,17 +54,25 @@ export class ManagementComponent implements OnInit {
         this.productsService.getAllProducts().subscribe((res)=>{
       console.log(res);
       this.allProducts = res;
+      this.allProductsNoChange = res;
     });
   }
 
 showAllUsersDiv(){
   this.showAllUsers = !this.showAllUsers;
+  if(this.showCreateUserForm){this.showCreateUserForm = !this.showCreateUserForm;}
 }
+showCreateUser(){
+    this.showCreateUserForm = !this.showCreateUserForm;
+    if(this.showAllUsers){this.showAllUsers = !this.showAllUsers;}
+  }
 showAllProductsDiv(){
   this.showAllProducts = !this.showAllProducts;
+  if(this.showCreateProduct){this.showCreateProduct = !this.showCreateProduct;}
 }
 showCreateProductDiv(){
   this.showCreateProduct = !this.showCreateProduct;
+  if(this.showAllProducts){this.showAllProducts = !this.showAllProducts;}
 }
   editUser(username: any){
     const modalRef = this.modalService.open(
@@ -70,12 +82,13 @@ showCreateProductDiv(){
     modalRef.componentInstance.username = username;
   }
 
-  editProduct(id: any){
-
-  }
-
-  showCreateUser(){
-    this.showCreateUserForm = !this.showCreateUserForm;
+  editProduct(productID: any){
+    console.log(productID)
+  const modalRef = this.modalService.open(
+      EditProductComponent,
+      { centered: true }
+    );
+    modalRef.componentInstance.productID = productID;
   }
 
   submitProductForm(){
@@ -105,6 +118,28 @@ showCreateProductDiv(){
           console.log('User Created successfully!');
         },
       })
+  }
+
+  searchProduct(event: any){
+    this.productSearch = event.target.value;
+    this.searchProductResult(this.productSearch);
+  }
+
+  searchProductResult(search: string) {
+    this.productsService.searchProduct(search).subscribe({next:(res)=>{
+      if(res){
+        this.result = res;
+        console.log(res);
+        this.allProducts = this.result.data;
+      }
+      else{
+        this.allProducts = this.allProductsNoChange;
+      }
+    },error:(e)=>{
+      console.log(e);
+    },complete:()=>{
+      console.log("Search Completed");
+    }})
   }
 
 }

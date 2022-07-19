@@ -11,7 +11,7 @@ export class ProductsservicesService {
   apiUrl = 'http://localhost:3000/api/products/product';
   createProductApiUrl = 'http://localhost:3000/api/products/product/create';
   updateProductApiUrl = 'http://localhost:3000/api/products/product/update';
-
+  searchProductApiUrl = 'http://localhost:3000/api/products/product/search';
   // get all products
 
   getAllProducts(){
@@ -25,5 +25,8 @@ export class ProductsservicesService {
   }
   updateProductById(productUpdate: any,id: any){
     return this._httpclient.put(`${this.updateProductApiUrl}/`+ id,productUpdate);
+  }
+  searchProduct(data: string){
+    return this._httpclient.post(`${this.searchProductApiUrl}`,{search:data});
   }
 }

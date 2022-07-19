@@ -11,6 +11,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./edit-product.component.css']
 })
 export class EditProductComponent implements OnInit {
+
   ProductForm!: FormGroup;
   level: any;
   allUsers: any = [];
@@ -53,4 +54,5 @@ export class EditProductComponent implements OnInit {
       this.toastr.success("Product Updated Successfully")
     })
   }
+
 }
