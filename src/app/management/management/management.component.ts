@@ -128,8 +128,7 @@ showCreateProductDiv(){
   searchProductResult(search: string) {
     this.productsService.searchProduct(search).subscribe({next:(res)=>{
       if(res){
-        this.result = res;
-        this.allProducts = this.result.data;
+        this.allProducts = res;
       }
       else{
         this.allProducts = this.allProductsNoChange;
